@@ -68,7 +68,7 @@ def overlapSaveBlock(x_block, hSpectrum, buffer, M, N):
     # Discard repeated samples
     blockOutput = blockOutput[M - 1:]
 
-    # 4) actualizar buffer
+    # Update buffer
     bufferNew = block[-(M-1):]
 
     return blockOutput, bufferNew
