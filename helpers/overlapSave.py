@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
 #   Given a signal x(n) with infinite samples, and h(n) with M samples, the objective is to
 #   divide x(n) in blocks and filter each block separately, and then add all blocks together.
