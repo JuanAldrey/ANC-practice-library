@@ -10,5 +10,6 @@ def adapt(fx, e, M_w, blocklength, w, mu, leakeageTerm=0):
     crossCorrelationResult = np.fft.irfft(np.fft.rfft(fxPadded, N_w).conj() * np.fft.rfft(ePadded, N_w), N_w)
     crossCorrelationResult[M_w:] = 0
     crossCorrelationResult = crossCorrelationResult[:M_w]
+    crossCorrelationResult /= blocklength
 
-    return (1 - mu * leakeageTerm)*w + mu * crossCorrelationResult
+    return (1 - mu * leakeageTerm) * w + mu * crossCorrelationResult
