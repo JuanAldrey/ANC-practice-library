@@ -3,7 +3,7 @@ import numpy as np
 #   This block based adaptation of the filter coefficients is explained in Elliot page 150.
 
 def adapt(fx, e, M_w, blocklength, w, mu, leakeageTerm=0, NLMS=False):
-    N_w = blocklength + M_w -1
+    N_w = blocklength + M_w - 1
     fxPadded = np.concatenate([fx, np.zeros(M_w - 1)])
     ePadded = np.concatenate([e, np.zeros(M_w - 1)])
 
