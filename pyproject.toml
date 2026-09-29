@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anc-practice-library"
+version = "0.1.0"
+description = "Educational simulations of active noise control algorithms"
+requires-python = ">=3.9"
+dependencies = ["numpy", "scipy", "matplotlib", "pyroomacoustics", "notebook"]
+
+[tool.setuptools]
+packages = ["helpers"]

@@ -29,13 +29,13 @@ def room(
     room.add_microphone(errorMicPosition, fs=fs)
 
     fig, ax = room.plot()
-    ax.set_title("Vista superior del recinto")
+    ax.set_title("Top view of the room")
     ax.set_xlim(-5, 15)
     ax.set_ylim(-5, 15)
     ax.set_aspect('equal')
     plt.grid(True)
-    plt.xlabel('X (metros)')
-    plt.ylabel('Y (metros)')
+    plt.xlabel('X (meters)')
+    plt.ylabel('Y (meters)')
     plt.show()
 
     return room
