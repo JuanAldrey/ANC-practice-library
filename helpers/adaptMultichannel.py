@@ -1,6 +1,6 @@
 import numpy as np
 
-def adaptMultichannel(R, e, M_w, blocklength, w, mu):
+def adaptMultichannel(R, e, M_w, blocklength, w, mu, leakage=1):
 
     NwAdapt = blocklength + M_w - 1
 
@@ -11,4 +11,4 @@ def adaptMultichannel(R, e, M_w, blocklength, w, mu):
     crossCorrelation = np.fft.irfft(crossCorrelationSpectrum,n=NwAdapt,axis=-1)
     crossCorrelation = (crossCorrelation[..., :M_w]/ blocklength)
 
-    return w + mu * crossCorrelation
+    return leakage * w + mu * crossCorrelation
